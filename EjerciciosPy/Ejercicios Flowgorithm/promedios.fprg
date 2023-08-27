@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ale"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-07-06 06:37:18 p.&#160;m."/>
+        <attribute name="created" value="QWxlO0RFU0tUT1AtS0tOME1UTjsyMDIzLTA3LTA2OzA2OjEyOjAzIHAuwqBtLjsyOTY0"/>
+        <attribute name="edited" value="QWxlO0RFU0tUT1AtS0tOME1UTjsyMDIzLTA3LTA2OzA2OjM3OjE4IHAuwqBtLjsxOzMwODU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nota1, nota2, nota3" type="Integer" array="False" size=""/>
+            <declare name="resultado" type="Real" array="False" size=""/>
+            <output expression="&quot;calcula promedio&quot;" newline="True"/>
+            <output expression="&quot;ingresame la nota 1&quot;" newline="True"/>
+            <input variable="nota1"/>
+            <output expression="&quot;ingresame la nota 2&quot;" newline="True"/>
+            <input variable="nota2"/>
+            <output expression="&quot;ingresame la nota 3&quot;" newline="True"/>
+            <input variable="nota3"/>
+            <output expression="&quot;el promedio es &quot;" newline="True"/>
+            <assign variable="resultado" expression="(nota1 + nota2 + nota3) / 3"/>
+            <output expression="ToFixed(resultado, 2)" newline="True"/>
+            <if expression="resultado &gt;= 4">
+                <then>
+                    <if expression="resultado &gt;= 7">
+                        <then>
+                            <output expression="&quot;promociona&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;aprueba&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;recursar&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

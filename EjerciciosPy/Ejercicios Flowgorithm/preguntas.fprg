@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ale"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-10 06:00:03 p.&#160;m."/>
+        <attribute name="created" value="QWxlO0RFU0tUT1AtS0tOME1UTjsyMDIzLTA4LTEwOzA1OjI3OjIzIHAuwqBtLjsyOTY3"/>
+        <attribute name="edited" value="QWxlO0RFU0tUT1AtS0tOME1UTjsyMDIzLTA4LTEwOzA2OjAwOjAzIHAuwqBtLjsxOzMwNjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;bienvenidos&quot;" newline="True"/>
+            <call expression="pregunta(&quot;cual es la capital de francia?&quot;,&quot;1 - bs as&quot;, &quot;2 - lima&quot;, &quot;3 - paris&quot;, 3)"/>
+            <call expression="pregunta(&quot;cual es la capital de francia?&quot;,&quot;1 - bs as&quot;, &quot;2 - lima&quot;, &quot;3 - paris&quot;, 3)"/>
+        </body>
+    </function>
+    <function name="pregunta" type="None" variable="contestoCorrecto">
+        <parameters>
+            <parameter name="preg" type="String" array="False"/>
+            <parameter name="op1" type="String" array="False"/>
+            <parameter name="op2" type="String" array="False"/>
+            <parameter name="op3" type="String" array="False"/>
+            <parameter name="opcorr" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="preg" newline="True"/>
+            <output expression="op1" newline="True"/>
+            <output expression="op2" newline="True"/>
+            <output expression="op3" newline="True"/>
+            <declare name="opcion" type="Integer" array="False" size=""/>
+            <input variable="opcion"/>
+            <if expression="opcion == opcorr">
+                <then>
+                    <output expression="&quot;bien&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;mal&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

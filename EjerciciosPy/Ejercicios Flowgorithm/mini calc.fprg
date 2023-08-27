@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ale"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-07-06 06:02:04 p.&#160;m."/>
+        <attribute name="created" value="QWxlO0RFU0tUT1AtNjNCNEw0UDsyMDIzLTAyLTA2OyIwNTowNDoxMyAiOzI0NzE="/>
+        <attribute name="edited" value="QWxlO0RFU0tUT1AtNjNCNEw0UDsyMDIzLTAyLTA3OyIxMTo0MDoyOCAiOzM7MjU4NQ=="/>
+        <attribute name="edited" value="QWxlO0RFU0tUT1AtS0tOME1UTjsyMDIzLTA3LTA2OzA2OjAyOjA0IHAuwqBtLjsxOzMwNzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="primerNumero, segundoNumero" type="Integer" array="False" size=""/>
+            <declare name="numeroOperacionMatematica" type="Integer" array="False" size=""/>
+            <output expression="&quot;mini calc&quot;" newline="True"/>
+            <output expression="&quot;selecciona el numero de operacion&quot;" newline="True"/>
+            <output expression="&quot;1 - suma, 2 - resta, 3 - multi, 4 - divi&quot;" newline="True"/>
+            <output expression="&quot;cual queres?&quot;" newline="True"/>
+            <input variable="numeroOperacionMatematica"/>
+            <output expression="&quot;dame el primer n&#250;mero:&quot;" newline="True"/>
+            <input variable="primerNumero"/>
+            <output expression="&quot;dame el segundo n&#250;mero:&quot;" newline="True"/>
+            <input variable="segundoNumero"/>
+            <if expression="numeroOperacionMatematica &gt;= 1 &amp;&amp; numeroOperacionMatematica &lt;= 4">
+                <then>
+                    <if expression="numeroOperacionMatematica == 1">
+                        <then>
+                            <output expression="primerNumero &amp; &quot; + &quot; &amp; segundoNumero &amp; &quot; = &quot; &amp; primerNumero + segundoNumero" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="numeroOperacionMatematica == 2">
+                        <then>
+                            <output expression="primerNumero &amp; &quot; - &quot; &amp; segundoNumero &amp; &quot; = &quot; &amp; primerNumero - segundoNumero" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="numeroOperacionMatematica == 3">
+                        <then>
+                            <output expression="primerNumero &amp; &quot; * &quot; &amp; segundoNumero &amp; &quot; = &quot; &amp; primerNumero * segundoNumero" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="numeroOperacionMatematica == 4">
+                        <then>
+                            <output expression="primerNumero &amp; &quot; / &quot; &amp; segundoNumero &amp; &quot; = &quot; &amp; primerNumero / segundoNumero" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;esa opcion no es valida&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ale"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-07-06 05:41:06 p.&#160;m."/>
+        <attribute name="created" value="QWxlO0RFU0tUT1AtS0tOME1UTjsyMDIzLTA3LTA2OzA1OjMxOjE0IHAuwqBtLjsyOTY2"/>
+        <attribute name="edited" value="QWxlO0RFU0tUT1AtS0tOME1UTjsyMDIzLTA3LTA2OzA1OjQxOjA2IHAuwqBtLjsxOzMwNzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero" type="Integer" array="False" size=""/>
+            <output expression="&quot;ingresa un numero entre 10 y 15&quot;" newline="True"/>
+            <input variable="numero"/>
+            <if expression="numero &gt;= 10 &amp;&amp; numero &lt;= 15">
+                <then>
+                    <output expression="&quot;esta en el rango pedido&quot;" newline="True"/>
+                    <if expression="numero == 10">
+                        <then>
+                            <output expression="&quot;diez&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="numero == 11">
+                        <then>
+                            <output expression="&quot;once&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="numero == 12">
+                        <then>
+                            <output expression="&quot;doce&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="numero == 13">
+                        <then>
+                            <output expression="&quot;trece&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;no esta en el rango&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

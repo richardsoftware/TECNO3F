@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Ale"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-10 04:51:19 p.&#160;m."/>
+        <attribute name="created" value="QWxlO0RFU0tUT1AtS0tOME1UTjsyMDIzLTA4LTEwOzA0OjAxOjEwIHAuwqBtLjsyOTU0"/>
+        <attribute name="edited" value="QWxlO0RFU0tUT1AtS0tOME1UTjsyMDIzLTA4LTEwOzA0OjUxOjE5IHAuwqBtLjsxOzMwNzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numeroNotas" type="Integer" array="False" size=""/>
+            <output expression="&quot;cuantas notas tuviste?&quot;" newline="True"/>
+            <input variable="numeroNotas"/>
+            <declare name="notas" type="Integer" array="True" size="numeroNotas"/>
+            <declare name="indice" type="Integer" array="False" size=""/>
+            <declare name="suma" type="Real" array="False" size=""/>
+            <assign variable="suma" expression="0"/>
+            <for variable="indice" start="0" end="numeroNotas -1" direction="inc" step="1">
+                <output expression="&quot;dame la nota &quot; &amp; indice + 1" newline="True"/>
+                <input variable="notas[indice]"/>
+                <assign variable="suma" expression="suma + notas[indice]"/>
+            </for>
+            <declare name="resultado" type="Real" array="False" size=""/>
+            <assign variable="resultado" expression="suma / numeroNotas"/>
+            <output expression="&quot;el promedio es &quot; &amp; resultado" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
