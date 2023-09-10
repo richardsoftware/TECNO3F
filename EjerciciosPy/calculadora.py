@@ -1,4 +1,10 @@
-from tkinter import Tk, Entry, Button
+from tkinter import Tk, Entry, Button, StringVar
+
+digito = ""
+def tomar_digito(n):
+    global digito
+    digito = digito + str(n)
+    calculo.set(digito)
 
 ventana = Tk()
 
@@ -7,19 +13,20 @@ ventana.title("Calculadora Basica")
 ventana.geometry("350x350")
 ventana.resizable(False, False)
 
-datos = Entry(ventana,bg="black", fg="white")
+calculo = StringVar()
+
+datos = Entry(ventana,bg="black", fg="white", textvariable = calculo)
 datos.grid(columnspan=10, ipadx=113, ipady=10)
 
-boton1 = Button(ventana, text="1", fg="black", bg="white", height=2, width=6)
+boton1 = Button(ventana, text="1", fg="black", bg="white", height=2, width=6, command = lambda: tomar_digito(1))
 boton1.grid(columnspan=2, row=2, column=0)
 
-boton2 = Button(ventana, text="2", fg="black", bg="white", height=2, width=6)
+boton2 = Button(ventana, text="2", fg="black", bg="white", height=2, width=6, command = lambda: tomar_digito(2))
 boton2.grid(columnspan=2, row=2, column=2)
 
-boton3 = Button(ventana, text="3", fg="black", bg="white", height=2, width=6)
-boton3.grid(columnspan=2, row=2, column=4)
+boton3 = Button(ventana, text="3", fg="black", bg="white", height=2, width=6, command = lambda: tomar_digito(3))
 
-boton4 = Button(ventana, text="+", fg="black", bg="white", height=2, width=6)
+boton4 = Button(ventana, text="+", fg="black", bg="white", height=2, width=6, command = lambda: tomar_digito("+"))
 boton4.grid(columnspan=2, row=2, column=6)
 
 
