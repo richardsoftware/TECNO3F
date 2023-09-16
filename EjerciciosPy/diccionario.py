@@ -27,10 +27,6 @@ print(soyundiccionario.keys())
 for i in soyundiccionario.keys():
     print(soyundiccionario[i])
 
-print(type(soyundiccionario))
-print(soyundiccionario)
-suma = 250
-print(f"El resultado de la suma es {suma}")
 
 print(f"""
 
@@ -40,5 +36,6 @@ Nombre: {soyundiccionario["nombre"]}
 Apellido: {soyundiccionario["apellido"]}
 Edad: {soyundiccionario["edad"]}
 Signo: {soyundiccionario[4]}
+Pais: {soyundiccionario["pais"]}
 
 """)
