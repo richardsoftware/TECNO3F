@@ -4,13 +4,14 @@ import pickle, sys, os, random
 #funcion MENU
 def seleccionar_opcion_menu():
     print()
-    print("          Hola. Bienvenido al Sistema de Ticket")
-    print()
+    print("*************************************************************")
+    print("               Hola. Bienvenido a Ticket 5.0                 ")
+    print("*************************************************************")
     print("          1 - Generar un nuevo Ticket")
     print("          2 - Consultar un Ticket")
     print("          3 - Salir")
     print()
-    opcion_menu = int(input("          Ingrese su opcion: "))
+    opcion_menu = int(input("          Ingrese su opcion(1,2,3): "))
 
     return opcion_menu
 
@@ -26,25 +27,24 @@ def ingresar_ticket():
         soyundiccionario["sector"] = input("Ingrese su sector: ")
         soyundiccionario["asunto"] = input("Ingrese su asunto: ")
         soyundiccionario["mensaje"] = input("Ingrese su mensaje: ")
-        soyundiccionario["ticket"] = str(random.randint(1000, 9999)) # número aleatorio de ticket entre 1000 y 9999.soyundiccionario
+        soyundiccionario["ticket"] = str(random.randint(1000, 9999)) # número aleatorio de ticket entre 1000 y 9999.
 
         #guardar datos en archivo y mostrar en pantalla
         ticket = soyundiccionario
         guardar = soyundiccionario["ticket"]# número aleatorio de ticket entre 1000 y 9999.
         with open (guardar, "wb") as f:#guardar es el nombre del archivo(numero del ticket) WB Write-Binary
-            pickle.dump(ticket, f) #
+            pickle.dump(ticket, f) 
 
         print(f"""
 
-        =================================================
-                 Se genero el siguiente Ticket
-        =================================================
+        ====================================================================
+                          Se genero el siguiente Ticket
+        ====================================================================
                  
         Su nombre: {soyundiccionario["nombre"]}        Nro. de Ticket: {soyundiccionario["ticket"]}
         Sector: {soyundiccionario["sector"]}
         Asunto: {soyundiccionario["asunto"]}
         Mensaje: {soyundiccionario["mensaje"]}
-        Ticket: {guardar}
 
                       Recordar el número de ticket
 
@@ -54,19 +54,18 @@ def ingresar_ticket():
     return print(opcion_2)
 
 
-#Funcion Consultar Ticket Funciona bien
+#Funcion Consultar Ticket
 def consultar_ticket():
-
     opcion_3 = "S"
     while opcion_3.upper()!="N": # Mientras opcion_3 sea distinto de "n" o "N"
 
         print("=============================")
-        print("    Consulta de ticket")
+        print("    Consulta de ticket       ")
         print("=============================") 
 
         #leer el archivo
         abrir = input("Ingrese numero de Ticket: ")#abro el archivo nombre (numero de ticket)
-        with open (abrir, "rb") as f: #abro el archivo
+        with open (abrir, "rb") as f: #abro el archivo nombre del archivo(numero del ticket) RB Read-Binary
             ticket2 = pickle.load(f)
 
         print(f"""
@@ -75,11 +74,10 @@ def consultar_ticket():
                            Datos de su Ticket
         =================================================================
                  
-        Su nombre: {ticket2["nombre"]}        Nro. de Ticket: {abrir}
+        Su nombre: {ticket2["nombre"]}        Nro. de Ticket: {ticket2["ticket"]}
         Sector: {ticket2["sector"]}
         Asunto: {ticket2["asunto"]}
         Mensaje: {ticket2["mensaje"]}
-        Ticket: {ticket2["ticket"]}
 
         """)
 
@@ -118,7 +116,8 @@ while opcion_1 != 3:# Mientras opcion_1 sea distinto de 3
          consultar_ticket()
      
     elif opcion_1 == 3:
-        print("Salida")
+        print("Gracias !!! Ticket 5.0 Derechos Reservados")
                   
     else:
-        print("Error en su seleccion")
+        print()
+        print("Error en su seleccion! Ingrese una Opcion valida.")
