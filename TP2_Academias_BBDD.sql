@@ -8,7 +8,7 @@ USE institucion_educativa;
 
 /* CREAR LAS ENTIDADES O TABLAS DEL PROYECTO
 
- TABLA ESPECIALIDAD */
+ TABLAS */
 
 -- ************************************** Academias
 CREATE TABLE IF NOT EXISTS Academias(
@@ -19,9 +19,8 @@ CREATE TABLE IF NOT EXISTS Academias(
 
 );
 
--- ************************************** Profesores
-CREATE TABLE Profesores
-(
+-- ********************************* Profesores
+CREATE TABLE Profesores(
  id_profesor int NOT NULL PRIMARY KEY AUTO_INCREMENT,
  nombre      varchar(50) NOT NULL,
  apellido    varchar(50) NOT NULL,
@@ -31,9 +30,8 @@ CREATE TABLE Profesores
 
  FOREIGN KEY ( id_academia ) REFERENCES Academias ( id_academia )
 );
--- ************************************** Alumnos
-CREATE TABLE Alumnos
-(
+-- ********************************* Alumnos
+CREATE TABLE Alumnos(
  id_alumno   int NOT NULL PRIMARY KEY AUTO_INCREMENT,
  nombre      varchar(50) NOT NULL,
  apellido    varchar(50) NOT NULL,
@@ -44,9 +42,8 @@ CREATE TABLE Alumnos
  FOREIGN KEY ( id_academia ) REFERENCES Academias ( id_academia )
 );
 
--- ************************************** Cursos
-CREATE TABLE Cursos
-(
+-- ********************************* Cursos
+CREATE TABLE Cursos(
  id_curso    int NOT NULL PRIMARY KEY AUTO_INCREMENT,
  nombre      varchar(50) NOT NULL,
  descripcion text NOT NULL,
@@ -54,9 +51,8 @@ CREATE TABLE Cursos
 
  FOREIGN KEY ( id_profesor ) REFERENCES Profesores ( id_profesor )
 );
--- ************************************** Alumnos_x_cursos
-CREATE TABLE Alumnos_x_cursos
-(
+-- ********************************* Alumnos_x_cursos
+CREATE TABLE Alumnos_x_cursos(
  id        int NOT NULL PRIMARY KEY AUTO_INCREMENT,
  id_alumno int NOT NULL,
  id_curso  int NOT NULL,
@@ -64,9 +60,8 @@ CREATE TABLE Alumnos_x_cursos
  FOREIGN KEY ( id_alumno ) REFERENCES Alumnos ( id_alumno ),
  FOREIGN KEY ( id_curso ) REFERENCES Cursos ( id_curso )
 );
--- ************************************** Notas
-CREATE TABLE Notas
-(
+-- ********************************* Notas
+CREATE TABLE Notas(
  id_nota   int NOT NULL PRIMARY KEY AUTO_INCREMENT,
  nota      float NOT NULL,
  id_alumno int NOT NULL,
